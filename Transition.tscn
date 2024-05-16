@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=3 uid="uid://bwj3lpj2yhke7"]
+
+[ext_resource type="Script" path="res://Transition.gd" id="1_uh5hn"]
+[ext_resource type="Script" path="res://FadeRect.gd" id="2_uhf8i"]
+
+[sub_resource type="Animation" id="Animation_gpuia"]
+resource_name = "RESET"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ydqcl"]
+resource_name = "fadeout"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gql6j"]
+_data = {
+"RESET": SubResource("Animation_gpuia"),
+"fadeout": SubResource("Animation_ydqcl")
+}
+
+[node name="Transition" type="CanvasLayer"]
+script = ExtResource("1_uh5hn")
+
+[node name="FadeRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -800.0
+offset_top = -450.0
+offset_right = 800.0
+offset_bottom = 450.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.054902, 0.0470588, 0.0470588, 1)
+script = ExtResource("2_uhf8i")
+
+[node name="Fader" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_gql6j")
+}

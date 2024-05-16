@@ -1,0 +1,175 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxbtwq0uii34k"]
+
+[ext_resource type="PackedScene" uid="uid://c1rpfyi2y2hdn" path="res://Big Spikes.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://cwberb4fms4fl" path="res://TileMap1.tscn" id="3"]
+[ext_resource type="Texture2D" uid="uid://v258d3k2cayx" path="res://Sprites/SpikeGround.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://c8nml3ssrxqi3" path="res://Sprites/ShadowSpikeGround.png" id="4_khtp3"]
+[ext_resource type="PackedScene" uid="uid://bu5ki8118mqtm" path="res://Peg.tscn" id="5"]
+
+[node name="Room" type="Node2D"]
+
+[node name="Big_Spikes" parent="." instance=ExtResource("2")]
+z_index = -1
+position = Vector2(224, 98)
+
+[node name="TileMap2" parent="." instance=ExtResource("3")]
+layer_0/tile_data = PackedInt32Array(-327680, 1, 0, -327679, 1, 0, -327678, 1, 0, -327677, 1, 0, -327676, 1, 0, -327675, 1, 0, -327674, 1, 0, -327673, 1, 0, -327672, 1, 0, -327671, 1, 0, -327670, 1, 0, -327669, 1, 0, -327668, 1, 0, -327667, 1, 0, -327666, 1, 0, -327665, 1, 0, -262144, 1, 0, -262143, 1, 0, -262142, 1, 0, -262141, 1, 0, -262140, 1, 0, -262139, 1, 0, -262138, 1, 0, -262137, 1, 0, -262136, 1, 0, -262135, 1, 0, -262134, 1, 0, -262133, 1, 0, -262132, 1, 0, -262131, 1, 0, -262130, 1, 0, -262129, 1, 0, -196608, 1, 0, -196607, 1, 0, -196606, 1, 0, -196605, 1, 0, -196604, 1, 0, -196603, 1, 0, -196602, 1, 0, -196601, 1, 0, -196600, 1, 0, -196599, 1, 0, -196598, 1, 0, -196597, 1, 0, -196596, 1, 0, -196595, 1, 0, -196594, 1, 0, -196593, 1, 0, -131072, 1, 0, -131071, 1, 0, -131070, 1, 0, -131069, 1, 0, -131068, 1, 0, -131067, 1, 0, -131066, 1, 0, -131065, 1, 0, -131064, 1, 0, -131063, 1, 0, -131062, 1, 0, -131061, 1, 0, -131060, 1, 0, -131059, 1, 0, -131058, 1, 0, -131057, 1, 0, -65536, 1, 0, -65535, 1, 0, -65534, 1, 0, -65533, 1, 0, -65532, 1, 0, -65531, 1, 0, -65530, 1, 0, -65529, 1, 0, -65528, 1, 0, -65527, 1, 0, -65526, 1, 0, -65525, 1, 0, -65524, 1, 0, -65523, 1, 0, -65522, 1, 0, -65521, 1, 0, 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 65545, 0, 0, 65546, 0, 0, 65547, 0, 0, 65548, 0, 0, 65549, 0, 0, 65550, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131086, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262154, 0, 0, 262155, 0, 0, 262156, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 327680, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 327689, 0, 0, 327690, 0, 0, 327691, 0, 0, 327692, 0, 0, 327693, 0, 0, 327694, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589824, 1, 0, 589825, 1, 0, 589826, 1, 0, 589827, 1, 0, 589828, 1, 0, 589829, 1, 0, 589830, 1, 0, 589831, 1, 0, 589832, 1, 0, 589833, 1, 0, 589834, 1, 0, 589835, 1, 0, 589836, 1, 0, 589837, 1, 0, 589838, 1, 0, 589839, 1, 0, 655360, 1, 0, 655361, 1, 0, 655362, 1, 0, 655363, 1, 0, 655364, 1, 0, 655365, 1, 0, 655366, 1, 0, 655367, 1, 0, 655368, 1, 0, 655369, 1, 0, 655370, 1, 0, 655371, 1, 0, 655372, 1, 0, 655373, 1, 0, 655374, 1, 0, 655375, 1, 0, 720896, 1, 0, 720897, 1, 0, 720898, 1, 0, 720899, 1, 0, 720900, 1, 0, 720901, 1, 0, 720902, 1, 0, 720903, 1, 0, 720904, 1, 0, 720905, 1, 0, 720906, 1, 0, 720907, 1, 0, 720908, 1, 0, 720909, 1, 0, 720910, 1, 0, 720911, 1, 0, 786432, 1, 0, 786433, 1, 0, 786434, 1, 0, 786435, 1, 0, 786436, 1, 0, 786437, 1, 0, 786438, 1, 0, 786439, 1, 0, 786440, 1, 0, 786441, 1, 0, 786442, 1, 0, 786443, 1, 0, 786444, 1, 0, 786445, 1, 0, 786446, 1, 0, 786447, 1, 0, 851968, 1, 0, 851969, 1, 0, 851970, 1, 0, 851971, 1, 0, 851972, 1, 0, 851973, 1, 0, 851974, 1, 0, 851975, 1, 0, 851976, 1, 0, 851977, 1, 0, 851978, 1, 0, 851979, 1, 0, 851980, 1, 0, 851981, 1, 0, 851982, 1, 0, 851983, 1, 0)
+
+[node name="Little_Spikes" type="Area2D" parent="."]
+collision_layer = 2
+
+[node name="Sprite1" type="Sprite2D" parent="Little_Spikes"]
+position = Vector2(8, 136)
+texture = ExtResource("4")
+
+[node name="Shadow" type="Sprite2D" parent="Little_Spikes/Sprite1"]
+z_index = -1
+z_as_relative = false
+position = Vector2(2, 2)
+texture = ExtResource("4_khtp3")
+
+[node name="Sprite2" type="Sprite2D" parent="Little_Spikes"]
+position = Vector2(24, 136)
+texture = ExtResource("4")
+
+[node name="Shadow" type="Sprite2D" parent="Little_Spikes/Sprite2"]
+z_index = -1
+z_as_relative = false
+position = Vector2(2, 2)
+texture = ExtResource("4_khtp3")
+
+[node name="Sprite3" type="Sprite2D" parent="Little_Spikes"]
+position = Vector2(40, 136)
+texture = ExtResource("4")
+
+[node name="Shadow" type="Sprite2D" parent="Little_Spikes/Sprite3"]
+z_index = -1
+z_as_relative = false
+position = Vector2(2, 2)
+texture = ExtResource("4_khtp3")
+
+[node name="Sprite4" type="Sprite2D" parent="Little_Spikes"]
+position = Vector2(56, 136)
+texture = ExtResource("4")
+
+[node name="Shadow" type="Sprite2D" parent="Little_Spikes/Sprite4"]
+z_index = -1
+z_as_relative = false
+position = Vector2(2, 2)
+texture = ExtResource("4_khtp3")
+
+[node name="Sprite5" type="Sprite2D" parent="Little_Spikes"]
+position = Vector2(72, 136)
+texture = ExtResource("4")
+
+[node name="Shadow" type="Sprite2D" parent="Little_Spikes/Sprite5"]
+z_index = -1
+z_as_relative = false
+position = Vector2(2, 2)
+texture = ExtResource("4_khtp3")
+
+[node name="Sprite6" type="Sprite2D" parent="Little_Spikes"]
+position = Vector2(88, 136)
+texture = ExtResource("4")
+
+[node name="Shadow" type="Sprite2D" parent="Little_Spikes/Sprite6"]
+z_index = -1
+z_as_relative = false
+position = Vector2(2, 2)
+texture = ExtResource("4_khtp3")
+
+[node name="Sprite7" type="Sprite2D" parent="Little_Spikes"]
+position = Vector2(104, 136)
+texture = ExtResource("4")
+
+[node name="Shadow" type="Sprite2D" parent="Little_Spikes/Sprite7"]
+z_index = -1
+z_as_relative = false
+position = Vector2(2, 2)
+texture = ExtResource("4_khtp3")
+
+[node name="Sprite8" type="Sprite2D" parent="Little_Spikes"]
+position = Vector2(120, 136)
+texture = ExtResource("4")
+
+[node name="Shadow" type="Sprite2D" parent="Little_Spikes/Sprite8"]
+z_index = -1
+z_as_relative = false
+position = Vector2(2, 2)
+texture = ExtResource("4_khtp3")
+
+[node name="Sprite9" type="Sprite2D" parent="Little_Spikes"]
+position = Vector2(136, 136)
+texture = ExtResource("4")
+
+[node name="Shadow" type="Sprite2D" parent="Little_Spikes/Sprite9"]
+z_index = -1
+z_as_relative = false
+position = Vector2(2, 2)
+texture = ExtResource("4_khtp3")
+
+[node name="Sprite10" type="Sprite2D" parent="Little_Spikes"]
+position = Vector2(152, 136)
+texture = ExtResource("4")
+
+[node name="Shadow" type="Sprite2D" parent="Little_Spikes/Sprite10"]
+z_index = -1
+z_as_relative = false
+position = Vector2(2, 2)
+texture = ExtResource("4_khtp3")
+
+[node name="Sprite11" type="Sprite2D" parent="Little_Spikes"]
+position = Vector2(168, 136)
+texture = ExtResource("4")
+
+[node name="Shadow" type="Sprite2D" parent="Little_Spikes/Sprite11"]
+z_index = -1
+z_as_relative = false
+position = Vector2(2, 2)
+texture = ExtResource("4_khtp3")
+
+[node name="Sprite12" type="Sprite2D" parent="Little_Spikes"]
+position = Vector2(184, 136)
+texture = ExtResource("4")
+
+[node name="Shadow" type="Sprite2D" parent="Little_Spikes/Sprite12"]
+z_index = -1
+z_as_relative = false
+position = Vector2(2, 2)
+texture = ExtResource("4_khtp3")
+
+[node name="Sprite13" type="Sprite2D" parent="Little_Spikes"]
+position = Vector2(200, 136)
+texture = ExtResource("4")
+
+[node name="Shadow" type="Sprite2D" parent="Little_Spikes/Sprite13"]
+z_index = -1
+z_as_relative = false
+position = Vector2(2, 2)
+texture = ExtResource("4_khtp3")
+
+[node name="Sprite14" type="Sprite2D" parent="Little_Spikes"]
+position = Vector2(216, 136)
+texture = ExtResource("4")
+
+[node name="Shadow" type="Sprite2D" parent="Little_Spikes/Sprite14"]
+z_index = -1
+z_as_relative = false
+position = Vector2(2, 2)
+texture = ExtResource("4_khtp3")
+
+[node name="Sprite15" type="Sprite2D" parent="Little_Spikes"]
+position = Vector2(248, 136)
+texture = ExtResource("4")
+
+[node name="Shadow" type="Sprite2D" parent="Little_Spikes/Sprite15"]
+z_index = -1
+z_as_relative = false
+position = Vector2(2, 2)
+texture = ExtResource("4_khtp3")
+
+[node name="LittleSpikeCollision" type="CollisionPolygon2D" parent="Little_Spikes"]
+polygon = PackedVector2Array(0, 144, 7, 130, 8, 130, 15, 144, 16, 144, 23, 130, 24, 130, 31, 144, 32, 144, 39, 130, 40, 130, 47, 144, 48, 144, 55, 130, 56, 130, 63, 144, 64, 144, 71, 130, 72, 130, 79, 144, 80, 144, 87, 130, 88, 130, 95, 144, 96, 144, 103, 130, 104, 130, 111, 144, 112, 144, 119, 130, 120, 130, 127, 144, 128, 144, 135, 130, 136, 130, 143, 144, 144, 144, 151, 130, 152, 130, 159, 144, 160, 144, 167, 130, 168, 130, 175, 144, 176, 144, 183, 130, 184, 130, 191, 144, 192, 144, 199, 130, 200, 130, 207, 144, 208, 144, 215, 130, 216, 130, 223, 144, 240, 144, 247, 130, 248, 130, 255, 144, 128, 145)
+
+[node name="Peg" parent="." instance=ExtResource("5")]
+position = Vector2(112, 64)

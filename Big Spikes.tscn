@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1rpfyi2y2hdn"]
+
+[ext_resource type="Script" path="res://Big Spikes.gd" id="1"]
+[ext_resource type="Texture2D" uid="uid://d3pnsyq5l36tf" path="res://Sprites/Spike.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://dhfdkn8jaix84" path="res://Sprites/ShadowSpike.png" id="3_80cq3"]
+
+[node name="Big_Spikes" type="Area2D"]
+script = ExtResource("1")
+
+[node name="BottomSpikeSprite" type="Sprite2D" parent="."]
+z_as_relative = false
+position = Vector2(8, 135)
+texture = ExtResource("2")
+
+[node name="BottomSpikeShadow" type="Sprite2D" parent="BottomSpikeSprite"]
+z_index = -1
+z_as_relative = false
+position = Vector2(2, 2)
+texture = ExtResource("3_80cq3")
+
+[node name="UpperSpikeSprite" type="Sprite2D" parent="."]
+z_as_relative = false
+position = Vector2(8, -209)
+rotation = 3.14159
+scale = Vector2(-1, 1)
+texture = ExtResource("2")
+
+[node name="UpperSpikeShadow" type="Sprite2D" parent="UpperSpikeSprite"]
+z_index = -1
+z_as_relative = false
+position = Vector2(2, -2)
+texture = ExtResource("3_80cq3")
+
+[node name="BottomSpikeCollision" type="CollisionPolygon2D" parent="."]
+position = Vector2(8, 136)
+polygon = PackedVector2Array(-8, -120, -1, -134, 0, -134, 7, -120, 7, 135, -8, 135)
+
+[node name="UpperSpikeCollision" type="CollisionPolygon2D" parent="."]
+position = Vector2(7, -210)
+rotation = -3.14159
+polygon = PackedVector2Array(-8, -120, -1, -134, 0, -134, 7, -120, 7.16132, 63633, -7.83868, 63633)

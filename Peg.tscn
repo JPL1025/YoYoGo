@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bu5ki8118mqtm"]
+
+[ext_resource type="Texture2D" uid="uid://bbfwvblqysepi" path="res://Sprites/Screw.png" id="1_a4viv"]
+[ext_resource type="Texture2D" uid="uid://84yntllyrw2i" path="res://Sprites/ShadowScrew.png" id="2_chx8q"]
+
+[node name="Peg" type="Sprite2D"]
+z_index = 2
+texture = ExtResource("1_a4viv")
+
+[node name="PegShadow" type="Sprite2D" parent="."]
+z_as_relative = false
+texture = ExtResource("2_chx8q")
