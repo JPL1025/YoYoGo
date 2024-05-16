@@ -1,0 +1,9 @@
+res://default_env.tres
+res://Main.tscn
+res://World.tscn
+res://Big Spikes.tscn
+res://Player.tscn
+res://addons/admob/sample/Main.tscn
+res://Transition.tscn
+res://addons/admob/sample/Banner.tscn
+res://addons/admob/sample/Interstitial.tscn

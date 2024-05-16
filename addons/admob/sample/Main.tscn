@@ -1,0 +1,63 @@
+[gd_scene load_steps=10 format=3 uid="uid://0esyp38ds6yg"]
+
+[ext_resource type="Script" path="res://addons/admob/sample/Main.gd" id="1_xm28w"]
+[ext_resource type="FontFile" uid="uid://ctd0my3oi3sl7" path="res://addons/admob/assets/fonts/arial.ttf" id="3_acnhc"]
+[ext_resource type="Script" path="res://ViewBox.gd" id="3_dx6t1"]
+[ext_resource type="Script" path="res://ViewPort.gd" id="4_8jko2"]
+[ext_resource type="PackedScene" uid="uid://cri3l1dl1qvcf" path="res://World.tscn" id="5_bkjhy"]
+[ext_resource type="PackedScene" uid="uid://cpxd2i7v6t6b6" path="res://addons/admob/sample/RewardedInterstitial.tscn" id="5_db5ox"]
+[ext_resource type="PackedScene" uid="uid://c6u6s82p5d6qs" path="res://addons/admob/sample/Banner.tscn" id="6_xt5vc"]
+[ext_resource type="PackedScene" uid="uid://dkl0ov3vkn76o" path="res://addons/admob/sample/Interstitial.tscn" id="7_5rtn7"]
+
+[sub_resource type="Theme" id="Theme_1p2mi"]
+default_font = ExtResource("3_acnhc")
+default_font_size = 20
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_1p2mi")
+script = ExtResource("1_xm28w")
+
+[node name="Banner" parent="." instance=ExtResource("6_xt5vc")]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 5000.0
+offset_bottom = 5387.0
+
+[node name="Interstitial" parent="." instance=ExtResource("7_5rtn7")]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 5000.0
+offset_bottom = 4968.0
+
+[node name="RewardedInterstitial" parent="." instance=ExtResource("5_db5ox")]
+layout_mode = 0
+offset_right = 77.0
+offset_bottom = 104.0
+
+[node name="ViewBox" type="SubViewportContainer" parent="."]
+clip_contents = true
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 288.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_stretch_ratio = 0.0
+stretch_shrink = 2
+script = ExtResource("3_dx6t1")
+
+[node name="ViewPort" type="SubViewport" parent="ViewBox"]
+handle_input_locally = false
+snap_2d_transforms_to_pixel = true
+size = Vector2i(256, 144)
+render_target_update_mode = 4
+script = ExtResource("4_8jko2")
+
+[node name="World" parent="ViewBox/ViewPort" instance=ExtResource("5_bkjhy")]
