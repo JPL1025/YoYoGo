@@ -6,9 +6,9 @@ func reload():
 	get_node("/root/Main/ViewBox/ViewPort/World").reload()
 	$Fader.play_backwards('fadeout')
 	
-	get_node("/root/Main/Interstitial")._on_show_pressed()
+	#get_node("/root/Main/Interstitial")._on_show_pressed()
 	
 	
 func enter():
 	$Fader.play_backwards('fadeout')
-	get_node("/root/Main/Banner").banner_load()
+	#get_node("/root/Main/Banner").banner_load()

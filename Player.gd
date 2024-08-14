@@ -23,7 +23,7 @@ func _ready():
 	draw_web_start()
 	
 	# Load the ad to be played after death
-	get_node("/root/Main/Interstitial")._on_load_pressed()
+	#get_node("/root/Main/Interstitial")._on_load_pressed()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -122,7 +122,7 @@ func get_points():
 	
 func change_points():
 	
-	get_node("/root/Main/Banner").banner_destroy()
+	#get_node("/root/Main/Banner").banner_destroy()
 	
 	points = int((get_global_position().x + 18) / 256) + 1
 
@@ -249,7 +249,7 @@ func _on_start_button_button_up():
 	
 	$ButtonReleased.play()
 	
-	get_node("/root/Main/Banner").banner_destroy()
+	#get_node("/root/Main/Banner").banner_destroy()
 	
 	if points < 1:
 		points = 1 
